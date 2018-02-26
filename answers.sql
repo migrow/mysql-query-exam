@@ -3,7 +3,7 @@ use travel;
 /*
 1) Select a distinct list of ordered airports codes.
 */
-SELECT departAirport FROM flight GROUP BY departAirport;
+SELECT departAirport as Airports FROM flight GROUP BY departAirport;
 
 /*
 2) Provide a list of delayed flights departing from San Francisco (SFO).
