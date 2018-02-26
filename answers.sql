@@ -50,7 +50,7 @@ select departAirport, arriveAirport, max(miles) as miles from flight group by de
 /*
 10) List the top 5 passengers that have flown the most miles. Order by miles.
 */
-select passenger.firstName, passenger.lastName, sum(flight.miles) as miles from reservation inner join flight on flight.ID = reservation.flightID inner join passenger on passenger.ID = reservation.passengerID group by passenger.firstName, passenger.lastName order by miles desc limit 5;
+select passenger.firstName, passenger.lastName, sum(flight.miles) as miles from reservation inner join flight on flight.ID = reservation.flightID inner join passenger on passenger.ID = reservation.passengerID group by passenger.firstName, passenger.lastName order by miles desc, passenger.lastName desc limit 5;
 
 /*
 11) Provide a list of American airline flights ordered by route and arrival date and time.
